@@ -27,23 +27,7 @@ Calculadora web desenvolvida com Django, integrando operações matemáticas bá
 **Banco de Dados:**  
 - SQLite3  
 
----
 
-## 📂 Estrutura do Projeto  
-projectocalculadora/
-│
-├── static/calculadora/ # Arquivos estáticos
-│ ├── css/ # Estilos CSS
-│ ├── js/ # Lógica JavaScript
-│ └── img/ # Imagens (opcional)
-│
-├── templates/calculadora/ # Templates HTML
-│ └── index.html # Página principal
-│
-├── db.sqlite3 # Banco de dados
-└── manage.py # Script de gerenciamento
-
----
 
 ## 🚀 Como Executar  
 1. **Clone o repositório**  
