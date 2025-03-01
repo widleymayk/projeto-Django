@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %} <!-- Carrega a tag static para arquivos estáticos -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial_scale=max">
+    <title>Calculadora Simples com Django</title>
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="{% static 'calculadora/style.css' %}">
+</head>
+<body>
+    <h1>Calculadora Django</h1>
+    <!--Formulário que enviará os números e a operação selecionada-->
+    <form method="POST">
+        {% csrf_token %} <!--Proteção adicional contra ataques-->
+        <input type="number" name="numero__um" placeholder="Número 1" step="any" required>
+        <select name="operacao">
+            <option value="adicao">+</option>
+            <option value="subtracao">-</option>
+            <option value="multiplicacao">*</option>
+            <option value="divisao">/</option>
+        </select>
+        <input type="number" name="numero__dois" placeholder="Número 2" step="any" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <!--Exibir o resultado se houver um cálculo-->
+    {% if resultado %}
+        <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>
